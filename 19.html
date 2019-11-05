@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+<script type='text/javascript'>
+    let str = 'Cat like milk';
+    let letters = {}, result;
+    let words = str.split(' ');
+    words.forEach(function (word) {
+        word.split('').forEach(function (letter, i) {
+            if (!letters[letter])==-1; letters[letter]=1;
+
+        });
+
+    });
+
+    result = str.split('').filter(function (v) {
+        return !letters[v];
+
+    }).join('');
+    console.log(result);1
+</script>
+</body>
+</html>

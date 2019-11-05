@@ -1,0 +1,40 @@
+let x = prompt('Введите вес 1й гантели:', 1);
+if (isNaN(x)){
+    alert('ERROR! Please press F5 and repeat');
+} else {
+    x = parseFloat(x)
+}
+let y = prompt('Введите вес 2й гантели:', 2);
+if (isNaN(y)){
+    alert('ERROR! Please press F5 and repeat');
+} else {
+    y = parseFloat(y)
+}
+let z = prompt('Введите вес 3й гантели:', 3);
+if (isNaN(z)){
+    alert('ERROR! Please press F5 and repeat');
+} else {
+    z = parseFloat(z);
+}
+
+let sum, max, min;
+
+sum = x + y + z;
+
+if (x>y && x>z){
+    max = 'Первая гантеля самая тяжёлая'
+} else if (y>x && y>z) {
+    max = 'Вторая гантеля самая тяжёлая'
+} else {
+    max = 'Третяя гантеля самая тяжёлая'
+}
+
+if (x<y && x<z){
+    min = 'Первая гантеля самая лёгкая'
+} else if (y<x && y<z) {
+    min = 'Вторая гантеля самая лёгкая'
+} else {
+    min = 'Третяя гантеля самая лёгкая'
+}
+
+alert('Общая масса гантелей: ' + sum + '\n' + max + '\n' + min);

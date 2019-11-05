@@ -1,0 +1,31 @@
+
+let first_name = prompt('Введите фамилию: ', 'Gromyko')
+
+let s = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'V', 'W', 'X', 'Z']; // согласные
+let g = ['A', 'E', 'I', 'O', 'U', 'Y']; // гласные
+
+// перевод в верхний регистр
+let first_name_upper = '';
+for (let i = 0; i < first_name.length; i++) {
+    first_name_upper += first_name[i].toUpperCase()
+}
+
+let s_n = 0; //кол-во согласных
+let g_n = 0; //кол-во гласных
+
+// ужас
+for (let i = 0; i < first_name_upper.length; i++) {
+    for (let s_i = 0; s_i < s.length; s_i++) {
+        if (first_name_upper[i] == s[s_i]){
+            s_n += 1
+        }
+    }
+    for (let g_i = 0; g_i < g.length; g_i++) {
+        if (first_name_upper[i] == g[g_i]){
+            g_n += 1
+        }
+    }
+}
+
+// вывод
+alert('Кол-во согласных: ' + s_n +'\n' + 'Кол-во гласных: ' + g_n);

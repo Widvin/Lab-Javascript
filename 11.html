@@ -1,0 +1,31 @@
+let word_max_len = 0;
+let word_min_len = 99;
+let word_all_len = 0;
+
+let text = prompt('Введите текст:', 'яблоко, окно, стол машина');
+
+text = text.replace(/^[\s\.,\-:\(\)]+/, "");
+text = text.replace(/[\s\.,\-:\(\)]+$/, "");
+
+words_list = text.split(/[\s\.,\-:\(\)]+/);
+words_amount = words_list.length;
+
+for(let i = 0; i < words_list.length; i++) {
+    let current_word_len = words_list[i].length;
+    if( current_word_len > word_max_len ) {
+        word_max_len = current_word_len;
+    }
+    if( current_word_len < word_min_len ) {
+        word_min_len = current_word_len;
+    }
+    word_all_len += current_word_len;
+}
+
+let words_mean_len = parseInt(word_all_len / words_amount);
+
+var ret =
+                "Количество слов: " + words_amount + "\n" +
+                "Максимальная длина слова: " + word_max_len + "\n" +
+                "Минимальная длина слова: " + word_min_len + "\n" +
+                "Среднее значение длины слова: " + words_mean_len;
+                alert(ret);

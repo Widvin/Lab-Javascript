@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<script type='text/javascript'>
+    let x=10;
+
+    nextPrime:
+    for(let i=2; i<=x; i++) {
+        for(let j=2; j<i; j++) {
+            if(i%j==0) continue nextPrime;
+        }
+        alert('simple clean: '+i);
+    }
+
+</script>
+</body>
+</html>
